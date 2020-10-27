@@ -43,6 +43,7 @@ public class TokenAuthorizationService implements AuthorizationService {
     @Override
     public boolean isAuthorized(Operation operation, Resource resource) throws PluginException {
         System.out.println("Username: "+ this.getUsername());
+        System.out.println("Token: "+ this.getToken());
 //        LOGGER.info("Username: {}", this.getUsername());
         if (resource == null || resource.getAuthorization() == null) {
             return true;
@@ -66,6 +67,7 @@ public class TokenAuthorizationService implements AuthorizationService {
             throws PluginException, AuthorizationInvalidException, OperationOnResourceNotPermittedException {
 
         System.out.println("Username: "+ this.getUsername());
+        System.out.println("Token: "+ this.getToken());
 //        LOGGER.info("Username: {}", this.getUsername());
          if (resource == null || resource.getAuthorization() == null) {
              return;
